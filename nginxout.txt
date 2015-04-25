@@ -1,0 +1,12 @@
+[root@puppet ~]# puppet agent --test
+info: Caching catalog for puppet.minsk.epam.com
+info: Applying configuration version '1429953374'
+notice: /Stage[main]//Node[default]/Package[nginx]/ensure: created
+notice: Nginx is running.
+notice: /Stage[main]//Node[default]/Notify[Nginx is running.]/message: defined 'message' as 'Nginx is running.'
+notice: Nginx is installed.
+notice: /Stage[main]//Node[default]/Notify[Nginx is installed.]/message: defined 'message' as 'Nginx is installed.'
+notice: /Stage[main]//Node[default]/Service[nginx]/ensure: ensure changed 'stopped' to 'running'
+info: /Stage[main]//Node[default]/Service[nginx]: Unscheduling refresh on Service[nginx]
+notice: Finished catalog run in 108.18 seconds
+
