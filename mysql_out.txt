@@ -1,0 +1,74 @@
+[root@puppet ~]# puppet agent --test
+info: Caching catalog for puppet.minsk.epam.com
+info: Applying configuration version '1429956142'
+notice: /Stage[main]/Mysql::Server::Install/Package[mysql-server]/ensure: created
+notice: /Stage[main]/Mysql::Server::Install/Exec[mysql_install_db]/returns: executed successfully
+notice: /File[mysql-config-file]/content: 
+--- /etc/my.cnf	2014-02-12 19:08:37.000000000 +0000
++++ /tmp/puppet-file20150425-4189-aminyc-0	2015-04-25 10:04:03.817748029 +0000
+@@ -1,10 +1,49 @@
++### MANAGED BY PUPPET ###
++
++[client]
++port = 3306
++socket = /var/lib/mysql/mysql.sock
++
++[isamchk]
++key_buffer_size = 16M
++
+ [mysqld]
+-datadir=/var/lib/mysql
+-socket=/var/lib/mysql/mysql.sock
+-user=mysql
+-# Disabling symbolic-links is recommended to prevent assorted security risks
+-symbolic-links=0
++basedir = /usr
++bind-address = 127.0.0.1
++datadir = /var/lib/mysql
++expire_logs_days = 10
++key_buffer_size = 16M
++log-error = /var/log/mysqld.log
++max_allowed_packet = 16M
++max_binlog_size = 100M
++max_connections = 151
++myisam_recover = BACKUP
++pid-file = /var/run/mysqld/mysqld.pid
++port = 3306
++query_cache_limit = 1M
++query_cache_size = 16M
++skip-external-locking
++socket = /var/lib/mysql/mysql.sock
++ssl = false
++ssl-ca = /etc/mysql/cacert.pem
++ssl-cert = /etc/mysql/server-cert.pem
++ssl-key = /etc/mysql/server-key.pem
++thread_cache_size = 8
++thread_stack = 256K
++tmpdir = /tmp
++user = mysql
+ 
+ [mysqld_safe]
+-log-error=/var/log/mysqld.log
+-pid-file=/var/run/mysqld/mysqld.pid
++log-error = /var/log/mysqld.log
++nice = 0
++socket = /var/lib/mysql/mysql.sock
++
++[mysqldump]
++max_allowed_packet = 16M
++quick
++quote-names
++
++
++
++!includedir /etc/my.cnf.d
++
+
+info: FileBucket adding {md5}8ace886bbe7e274448bc8bea16d3ead6
+info: /File[mysql-config-file]: Filebucketed /etc/my.cnf to puppet with sum 8ace886bbe7e274448bc8bea16d3ead6
+notice: /File[mysql-config-file]/content: content changed '{md5}8ace886bbe7e274448bc8bea16d3ead6' to '{md5}d0d209eb5ed544658b3f1a72274bc3ed'
+notice: /File[/etc/my.cnf.d]/ensure: created
+notice: /Stage[main]/Mysql::Server::Service/Service[mysqld]/ensure: ensure changed 'stopped' to 'running'
+info: /Stage[main]/Mysql::Server::Service/Service[mysqld]: Unscheduling refresh on Service[mysqld]
+notice: Finished catalog run in 102.82 seconds
+
