@@ -1,0 +1,42 @@
+name,status,resource_count,pending_count,failed_count,compliant_count,resource_type,title,evaluation_time,file,line,time,change_count,out_of_sync_count,skipped,failed
+node.minsk.epam.com,changed,27,0,0,27,File,mysql-config-file,0.711947,/etc/puppet/modules/mysql/manifests/server/config.pp,43,2015-04-27 09:00 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Anchor,mysql::client::end,0.004114,/etc/puppet/modules/mysql/manifests/client.pp,27,2015-04-27 09:02 UTC,0,0,false,false
+node.minsk.epam.com,changed,27,0,0,27,Anchor,mysql::client::start,0.005932,/etc/puppet/modules/mysql/manifests/client.pp,25,2015-04-27 09:02 UTC,0,0,false,false
+node.minsk.epam.com,changed,27,0,0,27,Service,mysqld,32.092354,/etc/puppet/modules/mysql/manifests/server/service.pp,25,2015-04-27 09:00 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,File,/etc/my.cnf.d,0.14227,/etc/puppet/modules/mysql/manifests/server/config.pp,19,2015-04-27 09:00 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Package,mysql-server,92.817413,/etc/puppet/modules/mysql/manifests/server/install.pp,10,2015-04-27 08:58 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,File,/var/log/mysqld.log,0.145203,/etc/puppet/modules/mysql/manifests/server/service.pp,17,2015-04-27 09:02 UTC,0,0,false,false
+node.minsk.epam.com,changed,27,0,0,27,Schedule,weekly,,,,2015-04-27 09:01 UTC,0,0,true,false
+node.minsk.epam.com,changed,27,0,0,27,Notify,Nginx is running.,0.034634,/etc/puppet/environments/prod/manifests/site.pp,11,2015-04-27 09:02 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Mysql_user,prod_user@localhost,6.431392,,,2015-04-27 09:02 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Notify,Nginx is installed.,0.022752,/etc/puppet/environments/prod/manifests/site.pp,6,2015-04-27 09:02 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Mysql_database,prod_mdb,3.821537,,,2015-04-27 09:03 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Anchor,mysql::server::start,0.002879,/etc/puppet/modules/mysql/manifests/server.pp,63,2015-04-27 08:58 UTC,0,0,false,false
+node.minsk.epam.com,changed,27,0,0,27,Schedule,hourly,,,,2015-04-27 08:58 UTC,0,0,true,false
+node.minsk.epam.com,changed,27,0,0,27,Anchor,mysql::db_prod_mdb::begin,0.004306,/etc/puppet/modules/mysql/manifests/db.pp,28,2015-04-27 09:02 UTC,0,0,false,false
+node.minsk.epam.com,changed,27,0,0,27,Mysql_grant,prod_user@localhost/prod_mdb.*,2.937013,/etc/puppet/modules/mysql/manifests/db.pp,56,2015-04-27 09:03 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Schedule,never,,,,2015-04-27 08:58 UTC,0,0,true,false
+node.minsk.epam.com,changed,27,0,0,27,Schedule,daily,,,,2015-04-27 08:58 UTC,0,0,true,false
+node.minsk.epam.com,changed,27,0,0,27,Package,nginx,80.353071,/etc/puppet/environments/prod/manifests/site.pp,4,2015-04-27 09:01 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Schedule,monthly,,,,2015-04-27 08:58 UTC,0,0,true,false
+node.minsk.epam.com,changed,27,0,0,27,Exec,mysql_install_db,11.017851,/etc/puppet/modules/mysql/manifests/server/install.pp,30,2015-04-27 09:00 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Service,nginx,5.160825,/etc/puppet/environments/prod/manifests/site.pp,9,2015-04-27 09:02 UTC,1,1,false,false
+node.minsk.epam.com,changed,27,0,0,27,Anchor,mysql::server::end,0.002995,/etc/puppet/modules/mysql/manifests/server.pp,64,2015-04-27 09:02 UTC,0,0,false,false
+node.minsk.epam.com,changed,27,0,0,27,Filebucket,puppet,0.004428,,,2015-04-27 09:01 UTC,0,0,false,false
+node.minsk.epam.com,changed,27,0,0,27,Package,mysql_client,3.436502,/etc/puppet/modules/mysql/manifests/client/install.pp,9,2015-04-27 09:02 UTC,0,0,false,false
+node.minsk.epam.com,changed,27,0,0,27,Schedule,puppet,,,,2015-04-27 09:03 UTC,0,0,true,false
+node.minsk.epam.com,changed,27,0,0,27,Anchor,mysql::db_prod_mdb::end,0.003303,/etc/puppet/modules/mysql/manifests/db.pp,30,2015-04-27 09:02 UTC,0,0,false,false
+puppet2.minsk.epam.com,unchanged,7,0,0,7,Schedule,weekly,0.002598,,,2015-04-27 08:49 UTC,0,0,false,false
+puppet2.minsk.epam.com,unchanged,7,0,0,7,Schedule,hourly,0.00187,,,2015-04-27 08:49 UTC,0,0,false,false
+puppet2.minsk.epam.com,unchanged,7,0,0,7,Schedule,never,0.004688,,,2015-04-27 08:49 UTC,0,0,false,false
+puppet2.minsk.epam.com,unchanged,7,0,0,7,Schedule,daily,0.002891,,,2015-04-27 08:49 UTC,0,0,false,false
+puppet2.minsk.epam.com,unchanged,7,0,0,7,Schedule,monthly,0.002537,,,2015-04-27 08:49 UTC,0,0,false,false
+puppet2.minsk.epam.com,unchanged,7,0,0,7,Filebucket,puppet,0.00436,,,2015-04-27 08:49 UTC,0,0,false,false
+puppet2.minsk.epam.com,unchanged,7,0,0,7,Schedule,puppet,0.002656,,,2015-04-27 08:49 UTC,0,0,false,false
+puppet.minsk.epam.com,unchanged,7,0,0,7,Schedule,weekly,,,,2015-04-27 08:34 UTC,0,0,true,false
+puppet.minsk.epam.com,unchanged,7,0,0,7,Schedule,hourly,,,,2015-04-27 08:34 UTC,0,0,true,false
+puppet.minsk.epam.com,unchanged,7,0,0,7,Schedule,never,,,,2015-04-27 08:34 UTC,0,0,true,false
+puppet.minsk.epam.com,unchanged,7,0,0,7,Schedule,daily,,,,2015-04-27 08:34 UTC,0,0,true,false
+puppet.minsk.epam.com,unchanged,7,0,0,7,Schedule,monthly,,,,2015-04-27 08:34 UTC,0,0,true,false
+puppet.minsk.epam.com,unchanged,7,0,0,7,Filebucket,puppet,0.00496,,,2015-04-27 08:34 UTC,0,0,false,false
+puppet.minsk.epam.com,unchanged,7,0,0,7,Schedule,puppet,,,,2015-04-27 08:34 UTC,0,0,true,false
