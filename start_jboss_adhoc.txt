@@ -1,0 +1,55 @@
+[root@node2 bin]# ./standalone.sh -b 192.168.33.16
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /opt/jboss-as-7.1.1.Final
+
+  JAVA: java
+
+  JAVA_OPTS:  -server -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.server.default.config=standalone.xml
+
+=========================================================================
+
+15:56:00,089 INFO  [org.jboss.modules] JBoss Modules version 1.1.1.GA
+15:56:15,088 INFO  [org.jboss.msc] JBoss MSC version 1.0.2.GA
+15:56:19,482 INFO  [org.jboss.as] JBAS015899: JBoss AS 7.1.1.Final "Brontes" starting
+15:57:28,808 INFO  [org.xnio] XNIO Version 3.0.3.GA
+15:57:28,901 INFO  [org.jboss.as.server] JBAS015888: Creating http management service using socket-binding (management-http)
+15:57:29,716 INFO  [org.xnio.nio] XNIO NIO Implementation Version 3.0.3.GA
+15:57:31,076 INFO  [org.jboss.remoting] JBoss Remoting version 3.2.3.GA
+15:57:32,744 INFO  [org.jboss.as.logging] JBAS011502: Removing bootstrap log handlers
+15:57:33,858 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 66) JBAS016200: Activating ConfigAdmin Subsystem
+15:57:34,383 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 71) JBAS010280: Activating Infinispan subsystem.
+15:57:35,220 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 79) JBAS011940: Activating OSGi Subsystem
+15:57:35,229 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 78) JBAS011800: Activating Naming Subsystem
+15:57:35,332 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 84) JBAS013101: Activating Security Subsystem
+15:57:36,593 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 88) JBAS015537: Activating WebServices Extension
+15:57:47,541 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013100: Current PicketBox version=4.0.7.Final
+15:57:50,021 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 67) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+15:57:50,069 INFO  [org.jboss.as.connector] (MSC service thread 1-2) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+15:57:58,928 INFO  [org.jboss.as.naming] (MSC service thread 1-1) JBAS011802: Starting Naming Service
+15:58:03,061 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-2) JBoss Web Services - Stack CXF Server 4.0.2.GA
+15:58:13,528 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-1) Starting Coyote HTTP/1.1 on http--192.168.33.16-8080
+15:58:14,995 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) JBAS015400: Bound mail session [java:jboss/mail/Default]
+15:58:36,675 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /127.0.0.1:9999
+15:58:41,297 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /opt/jboss-as-7.1.1.Final/standalone/deployments
+15:58:53,136 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /192.168.33.16:4447
+15:59:01,403 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+15:59:03,503 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+15:59:03,537 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final "Brontes" started in 202488ms - Started 133 of 208 services (74 services are passive or on-demand)
+15:59:05,180 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "testweb.war"
+15:59:05,175 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "testweb.xml"
+15:59:39,153 INFO  [org.jboss.web] (MSC service thread 1-1) JBAS018210: Registering web context: /testweb
+15:59:44,476 ERROR [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015052: Did not receive a response to the deployment operation within the allowed timeout period [60 seconds]. Check the server configuration file and the server logs to find more about the status of the deployment.
+15:59:44,849 ERROR [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015052: Did not receive a response to the deployment operation within the allowed timeout period [60 seconds]. Check the server configuration file and the server logs to find more about the status of the deployment.
+15:59:46,396 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018559: Deployed "testweb.war"
+15:59:46,477 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018559: Deployed "testweb.xml"
+^C16:03:01,864 INFO  [org.jboss.as.osgi] (MSC service thread 1-1) JBAS011942: Stopping OSGi Framework
+16:03:06,186 INFO  [org.jboss.as.logging] JBAS011503: Restored bootstrap log handlers
+16:03:08,868 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment testweb.xml in 7398ms
+16:03:09,727 INFO  [com.arjuna.ats.jbossatx] ARJUNA032018: Destroying TransactionManagerService
+16:03:09,741 INFO  [com.arjuna.ats.jbossatx] ARJUNA032014: Stopping transaction recovery manager
+16:03:09,850 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment testweb.war in 9395ms
+16:03:10,155 INFO  [org.jboss.as] JBAS015950: JBoss AS 7.1.1.Final "Brontes" stopped in 8679ms
+

@@ -1,0 +1,24 @@
+[root@node2 deployments]# puppet agent --test
+info: Retrieving plugin
+info: Loading facts in /var/lib/puppet/lib/facter/java_version.rb
+info: Loading facts in /var/lib/puppet/lib/facter/staging_http_get.rb
+info: Loading facts in /var/lib/puppet/lib/facter/facter_dot_d.rb
+info: Loading facts in /var/lib/puppet/lib/facter/windows_common_appdata.rb
+info: Loading facts in /var/lib/puppet/lib/facter/puppi_projects.rb
+info: Loading facts in /var/lib/puppet/lib/facter/last_run.rb
+info: Loading facts in /var/lib/puppet/lib/facter/java_major_version.rb
+info: Loading facts in /var/lib/puppet/lib/facter/pe_version.rb
+info: Loading facts in /var/lib/puppet/lib/facter/puppet_vardir.rb
+info: Loading facts in /var/lib/puppet/lib/facter/staging_windir.rb
+info: Loading facts in /var/lib/puppet/lib/facter/java_patch_level.rb
+info: Loading facts in /var/lib/puppet/lib/facter/root_home.rb
+info: Caching catalog for node2.minsk.epam.com
+info: Applying configuration version '1430149484'
+notice: /File[deploy_xml]/ensure: defined content as '{md5}ce36a65d3a25a220de2da0d584f0d0b0'
+info: /File[deploy_xml]: Scheduling refresh of Service[jboss]
+notice: /Stage[main]/Deploy/Exec[delete_old_testweb.zip]/returns: executed successfully
+notice: /Stage[main]/Deploy/Exec[delete_old_tmp_testweb]/returns: executed successfully
+notice: /Stage[main]/Jboss::Service/Service[jboss]/ensure: ensure changed 'stopped' to 'running'
+info: /Stage[main]/Jboss::Service/Service[jboss]: Unscheduling refresh on Service[jboss]
+notice: Finished catalog run in 118.12 seconds
+
